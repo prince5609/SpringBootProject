@@ -32,7 +32,13 @@ public class service {
 //                break;
 //            }
 //        }
-        return menudao.findById(sno).get();
+        // Method 1
+        // return menudao.findById(sno).get();
+        // This will give error if sno not found
+
+        // Method 2
+        List<Menu> list = menudao.findAll();
+        return list.stream().filter(menu -> menu.getSno() == (sno)).findAny().orElse(null);
     }
 
     public Menu add_menu(Menu menu) {
