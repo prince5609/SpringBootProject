@@ -6,7 +6,7 @@ import java.io.Serializable;
 
 @Entity
 
-public class Menu implements Serializable {
+public class Menu{
     @Id
     int sno;
     String name;

@@ -32,7 +32,7 @@ public class service {
 //                break;
 //            }
 //        }
-        return menudao.getReferenceById(sno);
+        return menudao.findById(sno).get();
     }
 
     public Menu add_menu(Menu menu) {
